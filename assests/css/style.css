@@ -1,3 +1,14 @@
-h1{
-    color: steelblue;
+.search{
+    margin-right: auto;
+    width: 20rem;
+}
+
+.Main-city{
+    height: 200px;
+}
+
+.card-list{
+    position: relative;
+    right: 40px;
+    list-style: none;
 }

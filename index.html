@@ -5,10 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assests/css/style.css">
 </head>
 <body>
-    <h1>Working</h1>
+    <div class="container-fluid border border-2 border-dark">
+        <div class="row border border-2 border-dark">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </div>
+    <div class="container-fluid d-flex border border-2 border-dark">
+        <div class="search  border border-2 border-dark">
+            <p class="h4 mt-2 mb-2 ms-2 fw-bold"> Search for a City:</p>
+            <!-- search bar  -->
+            <div contenteditable = "true" class="searchBar row-1 mb-3 ms-2 border border-2 border-dark col-11"></div>
+            <!-- end of searchbar -->
+            <button class="searchBtn btn btn-info col-11 ms-2">Search</button>
+            <hr class="col-11 ms-2">
+            <button data-city = "City 1" class="btn1 btn mb-3 ms-2 btn-secondary col-11">City 1</button>
+            <button data-city = "City 2" class="btn2 btn mb-3 ms-2 btn-secondary col-11">City 2</button>
+            <button data-city = "City 3" class="btn3 btn mb-3 ms-2 btn-secondary col-11">City 3</button>
+            <button data-city = "City 4" class="btn4 btn mb-3 ms-2 btn-secondary col-11">City 4</button>
+            <button data-city = "City 5" class="btn5 btn mb-3 ms-2 btn-secondary col-11">City 5</button>
+            <button data-city = "City 6" class="btn6 btn mb-3 ms-2 btn-secondary col-11">City 6</button>
+            <button data-city = "City 7" class="btn7 btn mb-3 ms-2 btn-secondary col-11">City 7</button>
+            <button data-city = "City 8" class="btn8 btn mb-3 ms-2 btn-secondary col-11">City 8</button>
+        </div>
+        <div class="container-fluid border border-2 border-dark">
+            <div class="Main-city row border border-2 border-dark">
+                <p class="title">HI</p>
+                <p><span class="h1 cityName"></span><span class="h1 date"></span></p>
+                <ul>
+                    <li>Temp: <span class="temp"></span></li>
+                    <li>Wind: <span class="wind"></span></li>
+                    <li>Humidity: <span class="humidity"></span></li>
+                    <li>UV Index: <span class="uvi"></span></li>
+                </ul>
+                
+            </div>
+            <div class="row border border-2 border-dark">
+                    <p class="h3">5-Day Forecast:</p>
+                    <div class="row row-cols-1 row-cols-md-5 ">
+                        <div class="card col-2 me-4 ms-4">
+                            <h5 class="card-title-1">Date</h5>
+
+                            <img  class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <ul class="card-list">
+                                 <li>Temp: <span class="c-temp1"></span></li>
+                                 <li>Wind: <span class="c-wind1"></span></li>
+                                 <li>Humidity: <span class="c-humidity1"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card col-2 me-4">
+                            <h5 class="card-title-2">Date</h5>
+                            <img  class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <ul class="card-list">
+                                 <li>Temp: <span class="c-temp2"></span></li>
+                                 <li>Wind: <span class="c-wind2"></span></li>
+                                 <li>Humidity: <span class="c-humidity2"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card col-2 me-4">
+                            <h5 class="card-title-3">Date</h5>
+                            <img  class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <ul class="card-list">
+                                 <li>Temp: <span class="c-temp3"></span></li>
+                                 <li>Wind: <span class="c-wind3"></span></li>
+                                 <li>Humidity: <span class="c-humidity3"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card col-2 me-4">
+                            <h5 class="card-title-4">Date</h5>
+                            <img  class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <ul class="card-list">
+                                 <li>Temp: <span class="c-temp4"></span></li>
+                                 <li>Wind: <span class="c-wind4"></span></li>
+                                 <li>Humidity: <span class="c-humidity4"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card col-2 ">
+                            <h5 class="card-title-5">Date</h5>
+                            <img  class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <ul class="card-list">
+                                 <li>Temp: <span class="c-temp5"></span></li>
+                                 <li>Wind: <span class="c-wind5"></span></li>
+                                 <li>Humidity: <span class="c-humidity5"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--End Of Card Group -->
+            </div>
+        </div>
+    </div>
+    
 
 
 
@@ -16,6 +114,8 @@
 
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--momentjs-->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
     <!--Bootstrap 5-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!--js File-->
