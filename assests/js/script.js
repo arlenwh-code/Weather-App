@@ -69,23 +69,28 @@ $(".searchBtn").on("click", function (){
         var wind = data.current.wind_speed;
         var humidity = data.current.humidity;
         var uvi = data.current.uvi;
+
         var day1Date = moment().add(1, 'days').format("MM/DD/YYYY");
         var day2Date = moment().add(2, 'days').format("MM/DD/YYYY");
         var day3Date = moment().add(3, 'days').format("MM/DD/YYYY");
         var day4Date = moment().add(4, 'days').format("MM/DD/YYYY");
         var day5Date = moment().add(5, 'days').format("MM/DD/YYYY");
+
+        var day0 = data.daily[0];
         var day1 = data.daily[1];
         var day2 = data.daily[2];
         var day3 = data.daily[3];
         var day4 = data.daily[4];
         var day5 = data.daily[5];
+
+        var icon0 = day0.weather[0].icon;
         var icon1 = day1.weather[0].icon;
         var icon2 = day2.weather[0].icon;
         var icon3 = day3.weather[0].icon;
         var icon4 = day4.weather[0].icon;
         var icon5 = day5.weather[0].icon;
-        console.log(icon1);
 
+        $(".title-img").attr("src", "http://openweathermap.org/img/wn/" + icon0 + "@2x.png")
         $(".card-img1").attr("src", "http://openweathermap.org/img/wn/" + icon1 + "@2x.png");
         $(".card-img2").attr("src", "http://openweathermap.org/img/wn/" + icon2 + "@2x.png");
         $(".card-img3").attr("src", "http://openweathermap.org/img/wn/" + icon3 + "@2x.png");
