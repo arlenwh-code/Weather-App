@@ -55,9 +55,7 @@ $(".searchBtn").on("click", function (){
         
         var oneCall = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial";
 
-        $(".cityName").text(cityName);
-        $(".date").text(" " + date);
-        $(".card-title").text(date);
+       
 
         return fetch(oneCall);
     }).then(function (response){
@@ -65,16 +63,12 @@ $(".searchBtn").on("click", function (){
     }).then(function (data){
         console.log(data);
        
-        var temp = data.current.temp;
+        
         var wind = data.current.wind_speed;
         var humidity = data.current.humidity;
         var uvi = data.current.uvi;
 
-        var day1Date = moment().add(1, 'days').format("MM/DD/YYYY");
-        var day2Date = moment().add(2, 'days').format("MM/DD/YYYY");
-        var day3Date = moment().add(3, 'days').format("MM/DD/YYYY");
-        var day4Date = moment().add(4, 'days').format("MM/DD/YYYY");
-        var day5Date = moment().add(5, 'days').format("MM/DD/YYYY");
+       
 
         var day0 = data.daily[0];
         var day1 = data.daily[1];
@@ -107,33 +101,7 @@ $(".searchBtn").on("click", function (){
         $(".card-img3").attr("src", "http://openweathermap.org/img/wn/" + icon3 + "@2x.png");
         $(".card-img4").attr("src", "http://openweathermap.org/img/wn/" + icon4 + "@2x.png");
         $(".card-img5").attr("src", "http://openweathermap.org/img/wn/" + icon5 + "@2x.png");
-
-        $(".temp").text(temp + "°F");
-        $(".card-title-1").text(day1Date);
-        $(".card-title-2").text(day2Date);
-        $(".card-title-3").text(day3Date);
-        $(".card-title-4").text(day4Date);
-        $(".card-title-5").text(day5Date);
-
-
-        $(".c-temp1").text(day1.temp.day);
-        $(".c-temp2").text(day2.temp.day);
-        $(".c-temp3").text(day3.temp.day);
-        $(".c-temp4").text(day4.temp.day);
-        $(".c-temp5").text(day5.temp.day);
-
-        $(".c-wind1").text(day1.wind_speed);
-        $(".c-wind2").text(day2.wind_speed);
-        $(".c-wind3").text(day3.wind_speed);
-        $(".c-wind4").text(day4.wind_speed);
-        $(".c-wind5").text(day5.wind_speed);
-
-        $(".c-humidity1").text(day1.humidity);
-        $(".c-humidity2").text(day2.humidity);
-        $(".c-humidity3").text(day3.humidity);
-        $(".c-humidity4").text(day4.humidity);
-        $(".c-humidity5").text(day5.humidity);
-
+        
         $(".wind").text(wind + " MPH");
         $(".humidity").text(humidity + " %");
         $(".uvi").text(uvi);
@@ -213,23 +181,23 @@ fetch(cityNameUrl).then(function (response){
     $(".card-title-5").text(day5Date);
 
 
-    $(".c-temp1").text(day1.temp.day);
-    $(".c-temp2").text(day2.temp.day);
-    $(".c-temp3").text(day3.temp.day);
-    $(".c-temp4").text(day4.temp.day);
-    $(".c-temp5").text(day5.temp.day);
+    $(".c-temp1").text(day1.temp.day + "°F");
+    $(".c-temp2").text(day2.temp.day + "°F");
+    $(".c-temp3").text(day3.temp.day + "°F");
+    $(".c-temp4").text(day4.temp.day + "°F");
+    $(".c-temp5").text(day5.temp.day + "°F");
 
-    $(".c-wind1").text(day1.wind_speed);
-    $(".c-wind2").text(day2.wind_speed);
-    $(".c-wind3").text(day3.wind_speed);
-    $(".c-wind4").text(day4.wind_speed);
-    $(".c-wind5").text(day5.wind_speed);
+    $(".c-wind1").text(day1.wind_speed + " MPH");
+    $(".c-wind2").text(day2.wind_speed + " MPH");
+    $(".c-wind3").text(day3.wind_speed + " MPH");
+    $(".c-wind4").text(day4.wind_speed + " MPH");
+    $(".c-wind5").text(day5.wind_speed + " MPH");
 
-    $(".c-humidity1").text(day1.humidity);
-    $(".c-humidity2").text(day2.humidity);
-    $(".c-humidity3").text(day3.humidity);
-    $(".c-humidity4").text(day4.humidity);
-    $(".c-humidity5").text(day5.humidity);
+    $(".c-humidity1").text(day1.humidity + " %");
+    $(".c-humidity2").text(day2.humidity + " %");
+    $(".c-humidity3").text(day3.humidity + " %");
+    $(".c-humidity4").text(day4.humidity + " %");
+    $(".c-humidity5").text(day5.humidity + " %");
 
     $(".wind").text(wind + " MPH");
     $(".humidity").text(humidity + " %");
