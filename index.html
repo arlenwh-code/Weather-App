@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="assests/css/style.css">
 </head>
 <body>
-    <div class="container-fluid border border-2 border-dark">
-        <div class="row border border-2 border-dark">
+    <div class="container-fluid con">
+        <div class="row bg-info">
             <h1>Weather Dashboard</h1>
         </div>
     </div>
-    <div class="container-fluid d-flex border border-2 border-dark">
-        <div class="search  border border-2 border-dark">
+    <div class="container-fluid d-flex">
+        <div class="search ">
             <p class="h4 mt-2 mb-2 ms-2 fw-bold"> Search for a City:</p>
             <!-- search bar  -->
-            <div contenteditable = "true" class="searchBar row-1 mb-3 ms-2 border border-2 border-dark col-11"></div>
+            <div contenteditable = "true" class="searchBar row-1 mb-3 ms-2 border border-2 border-secondary col-11"></div>
             <!-- end of searchbar -->
             <button class="searchBtn btn btn-info col-11 ms-2">Search</button>
             <hr class="col-11 ms-2">
@@ -31,10 +31,10 @@
             <button data-city = "City 7" class="btn7 btn mb-3 ms-2 btn-secondary col-11">City 7</button>
             <button data-city = "City 8" class="btn8 btn mb-3 ms-2 btn-secondary col-11">City 8</button>
         </div>
-        <div class="container-fluid border border-2 border-dark">
+        <div class="container-fluid">
             <div class="Main-city row border border-2 border-dark">
 
-                <p><span class="h1 cityName"></span><span class="h1 date"></span><img src="" class="title-img"></p>
+                <p><span class="h1 cityName"></span><span class="h1 date"></span><img src="" class="title-img col-sm"></p>
                 <ul class="main-list">
                     <li>Temp: <span class="temp"></span></li>
                     <li>Wind: <span class="wind"></span></li>
@@ -43,64 +43,64 @@
                 </ul>
                 
             </div>
-            <div class="row border border-2 border-dark">
+            <div class="row">
                     <p class="h3">5-Day Forecast:</p>
                     <div class="row row-cols-1 row-cols-md-5 ">
-                        <div class="card col-2 me-4 ms-4">
+                        <div class="card col-3 me-2 ms-1 bg-info">
                             <h5 class="card-title-1">Date</h5>
 
                             <img src="" class="card-img1 card-img-top" alt="...">
 
                             <div class="card-body">
-                                <ul class="card-list">
-                                 <li>Temp: <span class="c-temp1"></span></li>
-                                 <li>Wind: <span class="c-wind1"></span></li>
-                                 <li>Humidity: <span class="c-humidity1"></span></li>
-                                </ul>
+                                
+                                 <p>Temp: <span class="c-temp1"></span></p>
+                                 <p>Wind: <span class="c-wind1"></span></p>
+                                 <p>Humidity: <span class="c-humidity1"></span></p>
+                                
                             </div>
                         </div>
-                        <div class="card col-2 me-4">
+                        <div class="card col-3 me-2 bg-info">
                             <h5 class="card-title-2">Date</h5>
                             <img src="" class="card-img2 card-img-top" alt="...">
                             <div class="card-body">
-                                <ul class="card-list">
-                                 <li>Temp: <span class="c-temp2"></span></li>
-                                 <li>Wind: <span class="c-wind2"></span></li>
-                                 <li>Humidity: <span class="c-humidity2"></span></li>
-                                </ul>
+                                
+                                 <p>Temp: <span class="c-temp2"></span></p>
+                                 <p>Wind: <span class="c-wind2"></span></p>
+                                 <p>Humidity: <span class="c-humidity2"></span></p>
+                                
                             </div>
                         </div>
-                        <div class="card col-2 me-4">
+                        <div class="card col-3 me-2 bg-info">
                             <h5 class="card-title-3">Date</h5>
                             <img src="" class="card-img3 card-img-top" alt="...">
                             <div class="card-body">
-                                <ul class="card-list">
-                                 <li>Temp: <span class="c-temp3"></span></li>
-                                 <li>Wind: <span class="c-wind3"></span></li>
-                                 <li>Humidity: <span class="c-humidity3"></span></li>
-                                </ul>
+                                
+                                 <p>Temp: <span class="c-temp3"></span></p>
+                                 <p>Wind: <span class="c-wind3"></span></p>
+                                 <p>Humidity: <span class="c-humidity3"></span></p>
+                                
                             </div>
                         </div>
-                        <div class="card col-2 me-4">
+                        <div class="card col-3 me-2 bg-info">
                             <h5 class="card-title-4">Date</h5>
                             <img src="" class="card-img4 card-img-top" alt="...">
                             <div class="card-body">
-                                <ul class="card-list">
-                                 <li>Temp: <span class="c-temp4"></span></li>
-                                 <li>Wind: <span class="c-wind4"></span></li>
-                                 <li>Humidity: <span class="c-humidity4"></span></li>
-                                </ul>
+                                
+                                 <p>Temp: <span class="c-temp4"></span></p>
+                                 <p>Wind: <span class="c-wind4"></span></p>
+                                 <p>Humidity: <span class="c-humidity4"></span></p>
+                                
                             </div>
                         </div>
-                        <div class="card col-2 ">
+                        <div class="card col-3 bg-info">
                             <h5 class="card-title-5">Date</h5>
                             <img src="" class="card-img5 card-img-top" alt="...">
                             <div class="card-body">
-                                <ul class="card-list">
-                                 <li>Temp: <span class="c-temp5"></span></li>
-                                 <li>Wind: <span class="c-wind5"></span></li>
-                                 <li>Humidity: <span class="c-humidity5"></span></li>
-                                </ul>
+                                
+                                 <p>Temp: <span class="c-temp5"></span></p>
+                                 <p>Wind: <span class="c-wind5"></span></p>
+                                 <p>Humidity: <span class="c-humidity5"></span></p>
+                                
                             </div>
                         </div>
                     </div><!--End Of Card Group -->

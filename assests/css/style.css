@@ -1,3 +1,6 @@
+.con{
+    text-align: center;
+}
 .search{
     margin-right: auto;
     width: 20rem;
@@ -5,15 +8,54 @@
 
 .Main-city{
     height: 200px;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 576px) {
+    .title-img{
+        position: absolute;
+        top: 90px;
+        right: 100px;
+    }
+
+    .main-list{
+        position: relative;
+        top: 10px;
+        list-style: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .title-img{
+        position: absolute;
+        top: 115px;
+        right: 250px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .title-img{
+        position: absolute;
+        top: 115px;
+        right: 450px;
+    }
 }
 
 .main-list{
 position: relative;
 bottom: 30px;
+list-style: none;
 }
 
-.card-list{
-    position: relative;
-    right: 40px;
-    list-style: none;
+.card{
+    width: 8.2rem;
+}
+
+
+.card-body{
+    padding: 0 0 0 0;
+}
+
+.card-img-top{
+    width: 100px;
 }
