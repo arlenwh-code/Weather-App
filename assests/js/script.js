@@ -90,6 +90,17 @@ $(".searchBtn").on("click", function (){
         var icon4 = day4.weather[0].icon;
         var icon5 = day5.weather[0].icon;
 
+        
+        
+
+        if(uvi <= 4){
+            $(".uvi").css("background-color", "green");
+        }else if(uvi > 4 && uvi <= 7){
+            $(".uvi").css("background-color", "orange");
+        }else if(uvi > 7){
+            $(".uvi").css("background-color", "red");
+        };
+
         $(".title-img").attr("src", "http://openweathermap.org/img/wn/" + icon0 + "@2x.png")
         $(".card-img1").attr("src", "http://openweathermap.org/img/wn/" + icon1 + "@2x.png");
         $(".card-img2").attr("src", "http://openweathermap.org/img/wn/" + icon2 + "@2x.png");
@@ -126,6 +137,7 @@ $(".searchBtn").on("click", function (){
         $(".wind").text(wind + " MPH");
         $(".humidity").text(humidity + " %");
         $(".uvi").text(uvi);
+        console.log(uvi);
     });
 
 });
